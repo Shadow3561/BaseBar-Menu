@@ -62,6 +62,8 @@
       gap: 24px;
     }
 
+    .header-inner > .button { white-space: nowrap; }
+
     .brand {
       display: inline-flex;
       align-items: center;
@@ -94,6 +96,18 @@
 
     .brand-mark span:last-child { opacity: .48; }
 
+    .language-select {
+      min-height: 38px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
     nav {
       display: flex;
       align-items: center;
@@ -105,6 +119,7 @@
       font-size: 13px;
       text-decoration: none;
       transition: color .2s ease;
+      white-space: nowrap;
     }
 
     nav a:hover, .footer-links a:hover { color: var(--orange); }
@@ -526,6 +541,11 @@
     }
 
     @media (max-width: 900px) {
+      .header-inner {
+        flex-wrap: wrap;
+        padding: 12px 0;
+      }
+
       .hero {
         min-height: auto;
         grid-template-columns: 1fr;
@@ -537,7 +557,12 @@
       .demo-card { max-width: 760px; }
       .feature-grid { grid-template-columns: repeat(2, 1fr); }
       .offer-grid { grid-template-columns: 1fr 1fr; }
-      nav { gap: 16px; }
+      nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+      }
     }
 
     @media (max-width: 620px) {
@@ -586,7 +611,7 @@
     }
   </style>
 </head>
-<body>
+<body data-i18n-page="home">
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#" aria-label="BaseBar Menu Startseite">
@@ -598,6 +623,12 @@
         <a href="#demo">Einblick</a>
         <a href="#testen">Testen & Kaufen</a>
       </nav>
+      <select class="language-select" data-language-switch aria-label="Sprache auswählen">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+      </select>
       <a class="button" href="#testen">30 Tage testen</a>
     </div>
   </header>
@@ -755,7 +786,7 @@
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p>© 2026 Old Launchpad · BaseBar Menu</p>
+      <p>© 2026 BaseBar Menu · Daniel Wussow</p>
       <div class="footer-links">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
@@ -764,5 +795,6 @@
       </div>
     </div>
   </footer>
+  <script src="i18n.js" defer></script>
 </body>
 </html>

@@ -92,6 +92,18 @@ header {
   font-weight: 500;
 }
 
+.language-select {
+  min-height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
 .home-link {
   color: #e7d8d5;
   font-size: 13px;
@@ -222,7 +234,7 @@ footer {
 
 @media (max-width: 560px) {
   .wrap { width: min(880px, calc(100% - 32px)); }
-  .header-row { min-height: 68px; }
+  .header-row { min-height: 68px; flex-wrap: wrap; padding: 10px 0; }
   main { padding: 42px 0 58px; }
   .legal-card { padding: 18px; }
   .footer-row { align-items: flex-start; flex-direction: column; }

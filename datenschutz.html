@@ -8,13 +8,19 @@
   <title>Datenschutzerklärung — BaseBar Menu</title>
   <link rel="stylesheet" href="rechtliches.css">
 </head>
-<body>
+<body data-i18n-page="privacy">
   <header>
     <div class="wrap header-row">
       <a class="brand" href="index.html" aria-label="BaseBar Menu — A StartMenu for macOS">
         <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
         <span class="brand-copy"><strong>BaseBar Menu</strong><small>A StartMenu for macOS</small></span>
       </a>
+      <select class="language-select" data-language-switch aria-label="Sprache auswählen">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+      </select>
       <a class="home-link" href="index.html">Zur Website <span aria-hidden="true">↗</span></a>
     </div>
   </header>
@@ -83,5 +89,6 @@
       </nav>
     </div>
   </footer>
+  <script src="i18n.js" defer></script>
 </body>
 </html>

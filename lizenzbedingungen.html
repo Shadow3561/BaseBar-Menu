@@ -8,13 +8,19 @@
   <title>Lizenzbedingungen — BaseBar Menu</title>
   <link rel="stylesheet" href="rechtliches.css">
 </head>
-<body>
+<body data-i18n-page="license">
   <header>
     <div class="wrap header-row">
       <a class="brand" href="index.html" aria-label="BaseBar Menu — A StartMenu for macOS">
         <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
         <span class="brand-copy"><strong>BaseBar Menu</strong><small>A StartMenu for macOS</small></span>
       </a>
+      <select class="language-select" data-language-switch aria-label="Sprache auswählen">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+      </select>
       <a class="home-link" href="index.html">Zur Website <span aria-hidden="true">↗</span></a>
     </div>
   </header>
@@ -43,7 +49,7 @@
     <p>Für Schäden haften wir unbeschränkt bei Vorsatz und grober Fahrlässigkeit, bei Verletzung von Leben, Körper oder Gesundheit, nach dem Produkthaftungsgesetz sowie im Umfang einer ausdrücklich übernommenen Garantie. Bei leicht fahrlässiger Verletzung einer wesentlichen Vertragspflicht ist die Haftung auf den bei Vertragsschluss vorhersehbaren, typischen Schaden begrenzt. Im Übrigen ist die Haftung für leicht fahrlässig verursachte Schäden ausgeschlossen, soweit gesetzlich zulässig. Diese Regelungen ändern nichts an zwingenden gesetzlichen Ansprüchen.</p>
 
     <h2>7. Kontakt</h2>
-    <p>Daniel Wussow, C/O www.impressum-ohne-adresse.de, Wernher-von-Braun-Str. 5-7, 69214 Eppelheim, Deutschland<br>
+    <p>Daniel Wussow, C/O www.impressum-ohne-adresse.de, Wernher-von-Braun-Str. 5-7, 69214 Eppelheim, <span>Deutschland</span><br>
     <a href="mailto:enzym.plane.7q@icloud.com">enzym.plane.7q@icloud.com</a></p>
 
     <a class="back" href="index.html">← Zurück zu BaseBar Menu</a>
@@ -58,5 +64,6 @@
       </nav>
     </div>
   </footer>
+  <script src="i18n.js" defer></script>
 </body>
 </html>
