@@ -420,22 +420,29 @@
   };
 
   const metadata = {
+    de: {
+      home: ["BaseBar Menu für macOS – Apps & Systemeinstellungen", "Finde und starte Mac-Apps, öffne Systemeinstellungen und behalte laufende Apps im Blick – direkt über ein anpassbares Menü in der Menüleiste."],
+      imprint: ["Impressum — BaseBar Menu", "Angaben zum Anbieter dieser Website und von BaseBar Menu."],
+      privacy: ["Datenschutzerklärung — BaseBar Menu", "Informationen zur Verarbeitung personenbezogener Daten auf der Website und bei der Lizenzaktivierung von BaseBar Menu."],
+      license: ["Lizenzbedingungen — BaseBar Menu", "Bedingungen für die Nutzung von BaseBar Menu."],
+      consumer: ["Verbraucherinformationen — BaseBar Menu", "Informationen zum Kauf und zur digitalen Bereitstellung von BaseBar Menu."]
+    },
     en: {
-      home: ["BaseBar Menu - A StartMenu for macOS", "BaseBar Menu for macOS: apps, system settings, and running apps in a customizable menu bar menu."],
+      home: ["BaseBar Menu for macOS — Apps & System Settings", "Find and launch Mac apps, open system settings, and keep track of running apps from a customizable menu bar menu."],
       imprint: ["Legal notice — BaseBar Menu", "Publisher information for this website and BaseBar Menu."],
       privacy: ["Privacy policy — BaseBar Menu", "Information about personal data processed by the BaseBar Menu website and app."],
       license: ["License terms — BaseBar Menu", "License terms for using BaseBar Menu."],
       consumer: ["Consumer information — BaseBar Menu", "Information about purchasing and digital delivery of BaseBar Menu."]
     },
     es: {
-      home: ["BaseBar Menu - A StartMenu for macOS", "BaseBar Menu para macOS: apps, ajustes del sistema y apps abiertas en un menú personalizable en la barra de menús."],
+      home: ["BaseBar Menu para macOS — Apps y ajustes del sistema", "BaseBar Menu para macOS: apps, ajustes del sistema y apps abiertas en un menú personalizable en la barra de menús."],
       imprint: ["Aviso legal — BaseBar Menu", "Información sobre el titular de este sitio web y de BaseBar Menu."],
       privacy: ["Política de privacidad — BaseBar Menu", "Información sobre los datos personales tratados por el sitio web y la app BaseBar Menu."],
       license: ["Condiciones de licencia — BaseBar Menu", "Condiciones de licencia para utilizar BaseBar Menu."],
       consumer: ["Información para consumidores — BaseBar Menu", "Información sobre la compra y la entrega digital de BaseBar Menu."]
     },
     fr: {
-      home: ["BaseBar Menu - A StartMenu for macOS", "BaseBar Menu pour macOS : apps, réglages système et apps ouvertes dans un menu personnalisable de la barre des menus."],
+      home: ["BaseBar Menu pour macOS — Apps et réglages système", "BaseBar Menu pour macOS : apps, réglages système et apps ouvertes dans un menu personnalisable de la barre des menus."],
       imprint: ["Mentions légales — BaseBar Menu", "Informations sur l’éditeur de ce site et de BaseBar Menu."],
       privacy: ["Politique de confidentialité — BaseBar Menu", "Informations sur les données personnelles traitées par le site et l’app BaseBar Menu."],
       license: ["Conditions de licence — BaseBar Menu", "Conditions de licence pour l’utilisation de BaseBar Menu."],
@@ -478,6 +485,20 @@
   if (pageMetadata) {
     document.title = pageMetadata[0];
     document.querySelector('meta[name="description"]')?.setAttribute("content", pageMetadata[1]);
+    document.querySelector('meta[property="og:title"]')?.setAttribute("content", pageMetadata[0]);
+    document.querySelector('meta[property="og:description"]')?.setAttribute("content", pageMetadata[1]);
+    const canonical = new URL(window.location.pathname, window.location.origin);
+    if (supportedLanguages.includes(requestedLanguage) && language !== "de") {
+      canonical.searchParams.set("lang", language);
+    }
+    document.querySelector('link[rel="canonical"]')?.setAttribute("href", canonical.toString());
+    document.querySelector('meta[property="og:url"]')?.setAttribute("content", canonical.toString());
+    const structuredData = document.querySelector('script[type="application/ld+json"]');
+    if (structuredData) {
+      const schema = JSON.parse(structuredData.textContent);
+      schema.description = pageMetadata[1];
+      structuredData.textContent = JSON.stringify(schema);
+    }
   }
 
   if (supportedLanguages.includes(requestedLanguage)) {
