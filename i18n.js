@@ -3,6 +3,12 @@
     en: {
       "Dein Mac.": "Your Mac.",
       "Deine Ordnung.": "Your setup.",
+      "Vertraut wie in Windows": "Familiar like Windows",
+      "Das Startmenü": "The Start menu",
+      "für macOS.": "for macOS.",
+      "BaseBar Menu bringt den vertrauten Startmenü-Ansatz auf den Mac: Finde Apps, organisiere sie in Gruppen und öffne Systemeinstellungen – direkt aus der Menüleiste.": "BaseBar Menu brings a familiar Start menu concept to your Mac: find apps, organize them into groups, and open system settings—all from the menu bar.",
+      "Gibt es ein Startmenü wie in Windows für macOS?": "Is there a Start menu like Windows for macOS?",
+      "BaseBar Menu ist eine eigenständige macOS-App mit einem an Windows angelehnten Startmenü. Du findest installierte Apps über die Suche, organisierst sie in Gruppen und öffnest Systemeinstellungen – direkt aus der Menüleiste.": "BaseBar Menu is an independent macOS app with a Windows-inspired Start menu. Search installed apps, organize them into groups, and open system settings directly from the menu bar.",
       "Funktionen": "Features",
       "Einblick": "Preview",
       "Testen & Kaufen": "Try & Buy",
@@ -142,6 +148,12 @@
     es: {
       "Dein Mac.": "Tu Mac.",
       "Deine Ordnung.": "Todo en orden.",
+      "Vertraut wie in Windows": "Familiar como Windows",
+      "Das Startmenü": "El menú Inicio",
+      "für macOS.": "para macOS.",
+      "BaseBar Menu bringt den vertrauten Startmenü-Ansatz auf den Mac: Finde Apps, organisiere sie in Gruppen und öffne Systemeinstellungen – direkt aus der Menüleiste.": "BaseBar Menu lleva a tu Mac un menú de inicio familiar: encuentra apps, organízalas en grupos y abre los ajustes del sistema directamente desde la barra de menús.",
+      "Gibt es ein Startmenü wie in Windows für macOS?": "¿Hay un menú de inicio como el de Windows para macOS?",
+      "BaseBar Menu ist eine eigenständige macOS-App mit einem an Windows angelehnten Startmenü. Du findest installierte Apps über die Suche, organisierst sie in Gruppen und öffnest Systemeinstellungen – direkt aus der Menüleiste.": "BaseBar Menu es una app independiente para macOS con un menú de inicio inspirado en Windows. Busca las apps instaladas, organízalas en grupos y abre los ajustes del sistema desde la barra de menús.",
       "Funktionen": "Funciones",
       "Einblick": "Vista previa",
       "Testen & Kaufen": "Probar y comprar",
@@ -281,6 +293,12 @@
     fr: {
       "Dein Mac.": "Votre Mac.",
       "Deine Ordnung.": "Bien organisé.",
+      "Vertraut wie in Windows": "Familier comme sous Windows",
+      "Das Startmenü": "Le menu Démarrer",
+      "für macOS.": "pour macOS.",
+      "BaseBar Menu bringt den vertrauten Startmenü-Ansatz auf den Mac: Finde Apps, organisiere sie in Gruppen und öffne Systemeinstellungen – direkt aus der Menüleiste.": "BaseBar Menu apporte à votre Mac un menu Démarrer familier : trouvez des apps, classez-les en groupes et ouvrez les réglages système directement depuis la barre des menus.",
+      "Gibt es ein Startmenü wie in Windows für macOS?": "Existe-t-il un menu Démarrer comme sous Windows pour macOS ?",
+      "BaseBar Menu ist eine eigenständige macOS-App mit einem an Windows angelehnten Startmenü. Du findest installierte Apps über die Suche, organisierst sie in Gruppen und öffnest Systemeinstellungen – direkt aus der Menüleiste.": "BaseBar Menu est une app macOS indépendante avec un menu Démarrer inspiré de Windows. Recherchez les apps installées, organisez-les en groupes et ouvrez les réglages système depuis la barre des menus.",
       "Funktionen": "Fonctionnalités",
       "Einblick": "Aperçu",
       "Testen & Kaufen": "Essayer et acheter",
@@ -421,7 +439,7 @@
 
   const metadata = {
     de: {
-      home: ["BaseBar Menu für macOS – Apps & Systemeinstellungen", "Finde und starte Mac-Apps, öffne Systemeinstellungen und behalte laufende Apps im Blick – direkt über ein anpassbares Menü in der Menüleiste."],
+      home: ["Windows-ähnliches Startmenü für macOS | BaseBar Menu", "BaseBar Menu ist ein Windows-ähnliches Startmenü für macOS: Finde Apps, ordne sie in Gruppen und öffne Systemeinstellungen – direkt aus der Menüleiste."],
       imprint: ["Impressum — BaseBar Menu", "Angaben zum Anbieter dieser Website und von BaseBar Menu."],
       privacy: ["Datenschutzerklärung — BaseBar Menu", "Informationen zur Verarbeitung personenbezogener Daten auf der Website und bei der Lizenzaktivierung von BaseBar Menu."],
       license: ["Lizenzbedingungen — BaseBar Menu", "Bedingungen für die Nutzung von BaseBar Menu."],
